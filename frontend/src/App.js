@@ -13,9 +13,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <p>The date is {currentDate} and the time is {currentTime}.</p> <br/>
-
+        <h1>Data Protection Program</h1>
       </header>
+
+      {/* Navbar */}
+      <nav classname="Navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/guides">Guides</a></li>
+          <li><a href="/phishdetection">Phishing Detection</a></li>
+          <li><a href="passaid">Password Aid</a></li>
+        </ul>
+      </nav>
+
+      {/* Main Content */}
+      <main>
+        <p>Coming Soon...</p>
+      </main>
     </div>
   );
 }
