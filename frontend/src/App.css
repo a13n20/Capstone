@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #0B3954;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +24,39 @@
   color: white;
 }
 
+.Navbar {
+  background-color: #847E89;
+  overflow: hidden;
+}
+
+.NavLinks {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.NavLinks li {
+  padding: 14px 20px;
+}
+
+.NavLinks li a {
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.NavLinks li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+main{
+  padding: 20px;
+}
+
 .App-link {
-  color: #61dafb;
+  color: #087E8B;
 }
 
 @keyframes App-logo-spin {

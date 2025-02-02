@@ -5,7 +5,7 @@ function App() {
   const [currentTime, setCurrentTime] = useState(0);
   const [currentDate, setCurrentDate] = useState(0);
   useEffect(() => {
-  fetch(' http://127.0.0.1:8000/').then(res => res.json()).then(data => {
+    fetch(' http://127.0.0.1:8000/').then(res => res.json()).then(data => {
       setCurrentTime(data.time);
       setCurrentDate(data.date)
     });
@@ -18,11 +18,11 @@ function App() {
 
       {/* Navbar */}
       <nav classname="Navbar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/guides">Guides</a></li>
-          <li><a href="/phishdetection">Phishing Detection</a></li>
-          <li><a href="passaid">Password Aid</a></li>
+        <ul classname="NavLinks">
+          <a href="/">Home</a>
+          <a href="/guides">Guides</a>
+          <a href="/phishdetection">Phishing Detection</a>
+          <a href="passaid">Password Aid</a>
         </ul>
       </nav>
 
