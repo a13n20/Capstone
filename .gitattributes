@@ -1,1 +1,0 @@
-phish_detect_V1/model.safetensors filter=lfs diff=lfs merge=lfs -text
