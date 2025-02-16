@@ -11,6 +11,8 @@ rm -rf node_modules package-lock.json
 npm install
 npm start
 ```
+Note: DO NOT USE `npm audit fix --force`!!!!
+It changes version of all packages regardless of rules, possibly breaking everything. Use `npm audit fix` instead. 
 
 --- 
 
