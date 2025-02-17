@@ -1,37 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
+import Navbar from './components/navbar';
+import PhishingDetectionPage from './pages/phishingDetectionPage';
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(0);
-  const [currentDate, setCurrentDate] = useState(0);
-  useEffect(() => {
-    fetch(' http://127.0.0.1:8000/').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-      setCurrentDate(data.date)
-    });
-  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Data Protection Program</h1>
-      </header>
-
-      {/* Navbar */}
-      <nav classname="Navbar">
-        <ul classname="NavLinks">
-          <a href="/">Home</a>
-          <a href="/guides">Guides</a>
-          <a href="/phishdetection">Phishing Detection</a>
-          <a href="passaid">Password Aid</a>
-        </ul>
-      </nav>
+      {/* Navbar with header and navigation */}
+      <Navbar />
 
       {/* Main Content */}
       <main>
-        <p>Coming Soon...</p>
+        {/* Routes for different pages */}
+        <Routes>
+          <Route path="/" element={<h2>Welcome to the Home Page</h2>} /> {/* Homepage */}
+          <Route path="/guides" element={<h2>Guides Page (Coming Soon)</h2>} />
+          <Route path="/phishing-detection" element={<PhishingDetectionPage />} />
+          <Route path="/password-aid" element={<h2>Password Aid (Coming Soon)</h2>} />
+        </Routes>
       </main>
     </div>
   );
 }
 
 export default App;
+
+

@@ -1,0 +1,38 @@
+.NavbarContainer {
+    background-color: #0B3954;
+    padding: 20px 0;
+  }
+  
+  .App-header {
+    background-color: #0B3954;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .NavLinks {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .NavLinks li {
+    margin: 0 20px;
+  }
+  
+  .NavLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .NavLinks a:hover {
+    color: #ddd;
+  }
+  
