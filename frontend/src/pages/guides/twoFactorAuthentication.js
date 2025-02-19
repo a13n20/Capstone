@@ -1,6 +1,14 @@
 import React from "react";
 import '../pages.css';
 
+export const TwoFactorAuthPreview = () => {
+    return (
+        <div className='guidePage'>
+            <p>Learn how to protect your accounts with two-factor authentication.</p>
+        </div>
+    );
+};
+
 const TwoFactorAuthentication = () => {
     return (
         <div className='guidePage'>

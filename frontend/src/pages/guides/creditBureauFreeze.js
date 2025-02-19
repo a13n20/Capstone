@@ -1,6 +1,14 @@
 import React from "react";
 import '../pages.css';
 
+export const CreditBureauFreezePreview = () => {
+    return (
+        <div className='guidePage'>
+            <p>Learn how to protect your credit by freezing your credit reports for each credit bureau.</p>
+        </div>
+    );
+};
+
 const CreditBureauFreeze = () => {
     return (
         <div className='guidePage'>

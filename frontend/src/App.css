@@ -15,7 +15,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #0B3954;
   min-height: 25vh;
   display: flex;
@@ -53,7 +53,7 @@
 .NavLinks li a:hover {
   background-color: #087E8B;
   color: white;
-}
+} */
 
 main{
   padding: 20px;

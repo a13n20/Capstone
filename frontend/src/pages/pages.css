@@ -5,24 +5,43 @@
     min-height: 25vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
+    color: black;
     font-family: Calibri, sans-serif;
+    padding: 20px;
 }
 
 .guidePage h1 {
     color: #461220;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
     font-size: calc(40px + 2vmin);
     font-family: 'Iceland', cursive;
 }
 
 .guidePage h2 {
+    text-align: left;
     color: #461220;
+    margin-top: 10px;
     font-size: 30px;
-    font-family: Calibri, sans-serif;
 }
+
+.guidePage li {
+    text-align: left;
+    margin-bottom: 5px;
+}
+.guidePage ul {
+    text-align: left;
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
 .guidePage a {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
     color: #087E8B;
 }
 
@@ -32,4 +51,12 @@
 
 .guidePage a:visited {
     color: #847E89;
+}
+
+.guidePage .a p {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 5px;
+    color: black;
+    font-size: calc(5px + 2vmin);
 }

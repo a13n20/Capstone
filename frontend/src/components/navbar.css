@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
 .NavbarContainer {
     background-color: #0B3954;
     padding: 10px 0;
@@ -12,6 +14,7 @@
     justify-content: left;
     font-size: calc(25px + 2vmin);
     color: white;
+    font-family: 'Iceland', cursive;
   }
   
   .NavLinks {

@@ -8,7 +8,7 @@ const GuideDetail = () => {
 
     const guideMapping= {
         "How to Freeze Credit Bureaus": "creditBureauFreeze",
-        "Setting up Two-Factor Authentication": "twoFactorAuthentication"
+        "Setting Up Two-Factor Authentication": "twoFactorAuthentication"
     };
 
     const guideFileName= guideMapping[decodedTitle];
@@ -17,7 +17,7 @@ const GuideDetail = () => {
         return <div className='guidePage'><h1>Guide not Found.</h1></div>;
     }
 
-    const GuideComponent = lazy(() => import(`./guides/${guideFileName}.js`));
+    const GuideComponent = lazy(() => import(`./guides/${guideFileName}`));
 
     return (
         <Suspense fallback={<div className='guidePage'><h1>Loading...</h1></div>}>
