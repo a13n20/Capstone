@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+.guidePage {
+    background-color: white;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    font-family: Calibri, sans-serif;
+}
+
+.guidePage h1 {
+    color: #461220;
+    font-size: calc(40px + 2vmin);
+    font-family: 'Iceland', cursive;
+}
+
+.guidePage h2 {
+    color: #461220;
+    font-size: 30px;
+    font-family: Calibri, sans-serif;
+}
+.guidePage a {
+    color: #087E8B;
+}
+
+.guidePage a:hover {
+    color: #06646e;
+}
+
+.guidePage a:visited {
+    color: #847E89;
+}
