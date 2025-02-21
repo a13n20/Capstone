@@ -60,3 +60,16 @@
     color: black;
     font-size: calc(5px + 2vmin);
 }
+
+.guidePage button {
+    background-color: #847E89;
+    color: white;
+    border-radius: 5px;
+    outline: 2px;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.guidePage button:hover {
+    background-color: #68646b
+}

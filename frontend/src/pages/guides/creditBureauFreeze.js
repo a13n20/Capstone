@@ -1,5 +1,6 @@
 import React from "react";
 import '../pages.css';
+import BackButton from '../../components/backButton';
 
 export const CreditBureauFreezePreview = () => {
     return (
@@ -12,6 +13,7 @@ export const CreditBureauFreezePreview = () => {
 const CreditBureauFreeze = () => {
     return (
         <div className='guidePage'>
+            <BackButton />
             <h1>How to Freeze credit Bureaus</h1>
             <h2>Why freeze them?</h2>
             <h2>Equifax</h2>
