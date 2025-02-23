@@ -3,10 +3,9 @@ import '../pages.css';
 import BackButton from '../../components/backButton';
 
 const title = "How to Freeze credit Bureaus";
-const previewText = "Learn how to protect your credit by freezing your credit reports for Equifax, Experian, and TransUnion.";
+const preview = "Learn how to protect your credit by freezing your credit reports for Equifax, Experian, and TransUnion.";
 
-export { title as CreditBureauFreezeTitle };
-export { previewText as CreditBureauFreezePreview };
+export const creditBureauFreeze = { title, preview };
 
 const CreditBureauFreeze = () => {
     return (

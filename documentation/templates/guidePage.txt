@@ -1,0 +1,28 @@
+import React from "react";
+import '../pages.css';
+import BackButton from '../../components/backButton';
+
+const title = /* Title */;
+const preview = /* Preview */;
+
+export const /* guideName */ = { title, preview };
+
+const /* GuideName */ = () => {
+    return (
+        <div className='guidePage'>
+            <BackButton />
+            <h1>{title}</h1>
+            <p>/* Openning */</p>
+            <h2>/* Header */</h2>
+            <p>/* Body */</p>
+            <h2>/* Header */</h2>
+            <p>/* Body */</p>
+            <h2>Sources</h2>
+            <ul className='sources'>
+                <li>/* Citation */ - <a href=/* Link */ target="_blank">/* Source Title */</a></li>
+            </ul>
+        </div>
+    )
+}
+
+export default /* GuideName */;

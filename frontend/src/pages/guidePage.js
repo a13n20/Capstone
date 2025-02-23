@@ -4,20 +4,20 @@ import SearchBar from '../components/searchBar';
 import './pages.css';
 
 // Previews
-import { CreditBureauFreezeTitle, CreditBureauFreezePreview } from './guides/creditBureauFreeze';
-import { TwoFactorAuthTitle, TwoFactorAuthPreview } from './guides/twoFactorAuthentication';
+import { creditBureauFreeze } from './guides/creditBureauFreeze';
+import { twoFactorAuth } from './guides/twoFactorAuthentication';
 
 const GuidesPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const guides = [
-    { title: CreditBureauFreezeTitle, previewComponent: CreditBureauFreezePreview },
-    { title: TwoFactorAuthTitle, previewComponent: TwoFactorAuthPreview},
+    { title: creditBureauFreeze.title, preview: creditBureauFreeze.preview },
+    { title: twoFactorAuth.title, preview: twoFactorAuth.preview},
   ];
 
   const filteredGuides = guides.filter((guide) =>
     guide.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    guide.previewComponent.toLowerCase().includes(searchTerm.toLowerCase())
+    guide.preview.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -30,7 +30,7 @@ const GuidesPage = () => {
             <li key={index}>
               <Link to={`/guide/${encodeURIComponent(guide.title)}`}>
                 <h3>{guide.title}</h3>
-                <p>{guide.previewComponent}</p>
+                <p>{guide.preview}</p>
               </Link>
             </li>
           ))

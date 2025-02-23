@@ -3,10 +3,9 @@ import '../pages.css';
 import BackButton from '../../components/backButton';
 
 const title = "Setting up Two-Factor Authentication";
-const previewText = "Learn how to protect your accounts with two-factor authentication.";
+const preview = "Learn how to protect your accounts with two-factor authentication.";
 
-export { title as TwoFactorAuthTitle };
-export { previewText as TwoFactorAuthPreview };
+export const twoFactorAuth = { title, preview };
 
 const TwoFactorAuthentication = () => {
     return (

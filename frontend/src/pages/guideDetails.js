@@ -2,13 +2,16 @@ import React, { Suspense, lazy } from "react";
 import { useParams } from "react-router-dom";
 import './pages.css';
 
+import { creditBureauFreeze } from './guides/creditBureauFreeze';
+import { twoFactorAuth } from './guides/twoFactorAuthentication';
+
 const GuideDetail = () => {
     const { title } = useParams();
     const decodedTitle = decodeURIComponent(title);
 
     const guideMapping= {
-        "How to Freeze Credit Bureaus": "creditBureauFreeze",
-        "Setting Up Two-Factor Authentication": "twoFactorAuthentication"
+        [creditBureauFreeze.title]: "creditBureauFreeze",
+        [twoFactorAuth.title]: "twoFactorAuthentication"
     };
 
     const guideFileName= guideMapping[decodedTitle];
