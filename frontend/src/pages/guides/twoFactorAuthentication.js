@@ -2,19 +2,17 @@ import React from "react";
 import '../pages.css';
 import BackButton from '../../components/backButton';
 
-export const TwoFactorAuthPreview = () => {
-    return (
-        <div className='guidePage'>
-            <p>Learn how to protect your accounts with two-factor authentication.</p>
-        </div>
-    );
-};
+const title = "Setting up Two-Factor Authentication";
+const previewText = "Learn how to protect your accounts with two-factor authentication.";
+
+export { title as TwoFactorAuthTitle };
+export { previewText as TwoFactorAuthPreview };
 
 const TwoFactorAuthentication = () => {
     return (
         <div className='guidePage'>
             <BackButton />
-            <h1>Setting up Two-Factor Authentication</h1>
+            <h1>{title}</h1>
             <h2>Why have it?</h2>
             <h2>Trustworthy Tools</h2>
         </div>

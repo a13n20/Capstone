@@ -4,19 +4,20 @@ import SearchBar from '../components/searchBar';
 import './pages.css';
 
 // Previews
-import { CreditBureauFreezePreview } from './guides/creditBureauFreeze';
-import { TwoFactorAuthPreview } from './guides/twoFactorAuthentication';
+import { CreditBureauFreezeTitle, CreditBureauFreezePreview } from './guides/creditBureauFreeze';
+import { TwoFactorAuthTitle, TwoFactorAuthPreview } from './guides/twoFactorAuthentication';
 
 const GuidesPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const guides = [
-    { title: "How to Freeze Credit Bureaus", previewComponent: <CreditBureauFreezePreview /> },
-    { title: "Setting Up Two-Factor Authentication", previewComponent: <TwoFactorAuthPreview /> },
+    { title: CreditBureauFreezeTitle, previewComponent: CreditBureauFreezePreview },
+    { title: TwoFactorAuthTitle, previewComponent: TwoFactorAuthPreview},
   ];
 
   const filteredGuides = guides.filter((guide) =>
-    guide.title.toLowerCase().includes(searchTerm.toLowerCase())
+    guide.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    guide.previewComponent.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (

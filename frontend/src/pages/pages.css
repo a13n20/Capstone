@@ -24,9 +24,18 @@
     text-align: left;
     color: #461220;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: calc(15px + 2vmin);
 }
 
+.guidePage p {
+    text-indent: 2em;
+    text-align: left;
+    color: black;
+    margin-top: 10px;
+    font-size: calc(5px + 2vmin);
+}
+
+/* Guide List */
 .guidePage li {
     text-align: left;
     margin-bottom: 5px;
@@ -37,22 +46,17 @@
     list-style-type: none;
     margin-bottom: 5px;
 }
-
 .guidePage a {
-    display: block;
     margin-top: 10px;
     margin-bottom: 5px;
     color: #087E8B;
 }
-
 .guidePage a:hover {
     color: #06646e;
 }
-
 .guidePage a:visited {
     color: #847E89;
 }
-
 .guidePage .a p {
     text-align: left;
     padding-left: 0;
@@ -61,6 +65,33 @@
     font-size: calc(5px + 2vmin);
 }
 
+/* Sources */
+.guidePage .sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+    padding-left: 20px;
+    color: black;
+    font-size: calc(5px + 2vmin);
+    list-style-type: circle;
+    list-style-position: outside;
+}
+.guidePage .sources li {
+    margin: 0;
+    display: list-item;
+}
+.guidePage .sources .li a {
+    color: #087E8B;
+}
+.guidePage .sources .li a:hover {
+    color: #06646e;
+}
+.guidePage .sources .li a:visited {
+    color: #847E89;
+}
+
+/* Back Button */
 .guidePage button {
     background-color: #847E89;
     color: white;
@@ -69,7 +100,6 @@
     border: 0;
     text-transform: uppercase;
 }
-
 .guidePage button:hover {
     background-color: #68646b
 }
