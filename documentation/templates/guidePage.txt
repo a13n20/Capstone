@@ -2,6 +2,8 @@ import React from "react";
 import '../pages.css';
 import BackButton from '../../components/backButton';
 
+/* Add to guideDetails.js and guidePage.js */
+
 const title = /* Title */;
 const preview = /* Preview */;
 
@@ -15,7 +17,13 @@ const /* GuideName */ = () => {
             <p>/* Openning */</p>
             <h2>/* Header */</h2>
             <p>/* Body */</p>
+            <ul className='points'>
+            <li>/* Key Points */</li>
+            </ul>
             <h2>/* Header */</h2>
+            <ul className='steps'>
+            <li>/* Numbered Steps */</li>
+            </ul>
             <p>/* Body */</p>
             <h2>Sources</h2>
             <ul className='sources'>

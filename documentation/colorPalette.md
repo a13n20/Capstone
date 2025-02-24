@@ -2,6 +2,7 @@
 Peussian blue: #0B3954
     - Header background
     - Navbar background
+    - Image borders
 White
     - Main header text
     - Navbar text
