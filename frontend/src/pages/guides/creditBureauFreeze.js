@@ -8,6 +8,14 @@ import equifaxPlanSelectImage from '../../images/guidePages/EquifaxPlanOptions.p
 import equifaxBeforeFreeze from '../../images/guidePages/EquifaxBeforeFreeze.png';
 import equifaxAfterFreeze from '../../images/guidePages/EquifaxAfterFreeze.png';
 
+import experianHomePage from '../../images/guidePages/ExperianHomePage.png';
+import experianLogIn from '../../images/guidePages/ExperianLogIn.png';
+import experianFreezeNav from '../../images/guidePages/ExperianFreezeNavigation.png';
+import experianFreezeButton from '../../images/guidePages/ExperianFreezeButton.png';
+import experianUnfreezeNav from '../../images/guidePages/ExperianUnfreezeNavigation.png';
+import experianUnfreezeButton from '../../images/guidePages/ExperianUnfreezeButton.png';
+import experianDate from '../../images/guidePages/ExperianSelectDate.png';
+
 const title = "How to Freeze credit Bureaus";
 const preview = "Learn how to protect your credit by freezing your credit reports for Equifax, Experian, and TransUnion.";
 
@@ -37,7 +45,7 @@ const CreditBureauFreeze = () => {
                 <li><b>Click the "Log In" button.</b> Ignore the "SIGN UP NOW" button. This will lead you to sign up for a paid plan. <img src={equifaxLogInButtonImage} alt='A blue "Login" button is on the left with a white "Choose My Plan" button on the right.' /> <i>If you have an account already, click "Login" and skip to step 5.</i> If you need to make an account, click "Choose My Plan" and continue to the next step.</li>
                 <li><b>Select your plan.</b> I suggest selecting the free plan on the left for now. You can always upgrade later. <img src={equifaxPlanSelectImage} alt='Three plan options are listed. The leftmost plan is free, the middle is $4.95/month, and the rightmost one is $9.95/month. Each one has a "GET STARTED" button.' /></li>
                 <li><b>Follow Equifax's steps.</b> Remember to <i>use a unique password,</i> and if you created a new email <i>sign up with that email.</i> Once your account is created, log in.</li>
-                <li><b>Click "Place a freeze"</b> located on your Dashboard. It's located on the right side of the screen and it looks like this: <img src={equifaxBeforeFreeze} alt='A blue snowflake in a circle that says "Your Equifax credit report is not frozen" and blue text that says "Place a freeze."' /> If your Dashboard says "Your Equifax credit report is frozen." then you don't need to proceed with any further steps.</li>
+                <li><b>Click "Place a freeze"</b> located on your Dashboard. It's located on the right side of the screen and it looks like this: <img src={equifaxBeforeFreeze} alt='A blue snowflake in a circle that says "Your Equifax credit report is not frozen" and blue text that says "Place a freeze."' /> If your Dashboard says "Your Equifax credit report is frozen." then your account is frozen, and you don't need to proceed any further.</li>
                 <li><b>Follow Equifax's steps.</b> Once your account is frozen, a green checkmark will appear. You can download a confirmation PDF for your personal records, if you want.</li>
             </ul>
             <h3>Unfreeze</h3>
@@ -47,7 +55,30 @@ const CreditBureauFreeze = () => {
                 <li><b>Select to temporarily or permanently lift the freeze.</b> I recommend temporarily lifting the freeze. This ensures that the account will refreeze on a specified date if you forget to do it yourself. If you choose to temporarily lift the freeze, enter the dates you want the freeze lifted on the next page.</li>
             </ul>
             <h2>Experian</h2>
+            <h3>Freeze</h3>
+            <ul className='steps'>
+                <li><b>Navigate to <a href="https://www.experian.com/lpt/credit-score-tmpl.html?conf=frsc_b&pc=sem_exp_google&cc=sem_exp_google_ad_27946959_153535696290_689294283589_kwd-22992561_b___k_Cj0KCQiAq-u9BhCjARIsANLj-s0MP1XAq4TWJZtF5pPLKLQUFNZj9A-fdkGZ0edoUD6LUVB2WMGvvZwaAkWREALw_wcB_k_&ref=brand&awsearchcpc=1&gad_source=1&gbraid=0AAAAAD4mgc-QRYYCTANjG6y9CqGISXhYP&gclid=Cj0KCQiAq-u9BhCjARIsANLj-s0MP1XAq4TWJZtF5pPLKLQUFNZj9A-fdkGZ0edoUD6LUVB2WMGvvZwaAkWREALw_wcB" target="_blank">Experian.com</a>.</b> It should look like this: <img src={experianHomePage} alt='The Experian home page. A "Sign In" button is on the top right. "Get Your Free Credit Report and FICO Score*" is on the left in bold white letters, with a phone showing the Experian app on the right.' /></li>
+                <li><b>Click "Sign In"</b> on the top right. <img src={experianLogIn} alt='A blue "Sign in" button on the left and a white "Sign up for free" button on the right.' /> <i>If you have an account already, click "Sign in" and skip to step 5.</i> If you need to make an account, click "Sign up for free" and continue to the next step.</li>
+                <li><b>Follow Experian's steps.</b> Remember to <i>use a unique password,</i> and if you created a new email <i>sign up with that email.</i> Once your account is created, log in.</li>
+                <li><b>Scroll down and click "Freeze file."</b> The section will look like this: <img src={experianFreezeNav} alt='A blue stip with a frozen screen in the center with a red "Freeze file" button on the bottom left.' /><i>If the button says "Unfreeze file" then your account is frozen, and you don't need to proceed any further.</i></li>
+                <li><b>Click the "Unfrozen | Frozen" button.</b> The button will turn green once you click it, indicating that your account is now frozen.<img src={experianFreezeButton} alt='A gray snowflake on the right, with a gray "Unfrozen | Frozen" button on the left' /></li>
+            </ul>
+            <h3>Unfreeze</h3>
+            <ul className='steps'>
+                <li><b>Log in to Experian.</b></li>
+                <li><b>Scroll down and click "Unfreeze file."</b> The section will look like this:<img src={experianUnfreezeNav} alt='A blue stip with a frozen screen in the center with a red "Unfreeze file" button on the bottom left.' /></li>
+                <li><b>Click "Schedule a thaw" or the "Unfrozen | Frozen" button.</b> <img src={experianUnfreezeButton} alt='A gray snowflake on the right, with a green "Unfrozen | Frozen" button on the left. "Schedule a thaw" is in the center in small pink letters.' /> Clicking the "Unfrozen | Frozen" button will unfreeze your account, but you will have to manually refreeze it. I suggest scheduling a thaw rather than simply unfreezing your file. This ensures that the account will refreeze on a specified date if you forget to do it yourself. If you choose to schedule a thaw, then proceed to the next step. If not, then you don't need to proceed any further.</li>
+                <li><b>Select a date range.</b> First click on the pink "Add a thaw" button on the bottom left of the pop out window. On the next page, select a date range and click "Schedule thaw."<img src={experianDate} alt='A pop out window that says "Schedule a thaw" at the top, with a pale pink "Schedule a thaw" button on the bottom right. In the center, a dropdown menu that says "Select sate range."' /></li>
+            </ul>
             <h2>TransUnion</h2>
+            <h3>Freeze</h3>
+            <ul className='steps'>
+                
+            </ul>
+            <h3>Unfreeze</h3>
+            <ul className='steps'>
+                
+            </ul>
             <h2>Sources</h2>
             <ul className='sources'>
                 <li>Caporal, 2025 - <a href="https://www.fool.com/money/research/identity-theft-credit-card-fraud-statistics/" target="_blank">"Identity Theft and Credit Card Fraud Statistics for 2024"</a></li>
