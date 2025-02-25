@@ -28,7 +28,7 @@ const GuidesPage = () => {
         {filteredGuides.length > 0 ? (
           filteredGuides.map((guide, index) => (
             <li key={index}>
-              <Link to={`/guide/${encodeURIComponent(guide.title)}`}>
+              <Link className='guideLink' to={`/guide/${encodeURIComponent(guide.title)}`}>
                 <h3>{guide.title}</h3>
                 <p>{guide.preview}</p>
               </Link>

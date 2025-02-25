@@ -29,15 +29,6 @@
     font-size: calc(15px + 2vmin);
 }
 
-.guidePage h3 {
-    text-align: left;
-    color: black;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    line-height: 1.5;
-    font-size: calc(10px + 2vmin);
-}
-
 .guidePage p {
     text-indent: 2em;
     text-align: left;
@@ -71,16 +62,25 @@
     list-style-type: none;
     margin-bottom: 5px;
 }
-.guidePage a {
-    margin-top: 10px;
+.guidePage .guideLink {
+    text-decoration: none;
+    display: block;
+}
+.guidePage .guideLink h3 {
+    margin-top: 20px;
     margin-bottom: 5px;
     color: #087E8B;
 }
-.guidePage a:hover {
+.guidePage .guideLink:hover h3 {
     color: #06646e;
 }
-.guidePage a:visited {
-    color: #847E89;
+.guidePage .guideLink p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #404040;
+}
+.guidePage .guideLink:hover p {
+    color: black;
 }
 .guidePage .a p {
     text-align: left;
