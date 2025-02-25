@@ -29,6 +29,15 @@
     font-size: calc(15px + 2vmin);
 }
 
+.guidePage h3 {
+    text-align: left;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: calc(10px + 2vmin);
+}
+
 .guidePage p {
     text-indent: 2em;
     text-align: left;
@@ -37,6 +46,16 @@
     margin-bottom: 5px;
     line-height: 1.5;
     font-size: calc(5px + 2vmin);
+}
+
+.guidePage a {
+    color: #087E8B;
+}
+.guidePage a:hover {
+    color: #06646e;
+}
+.guidePage a:visited {
+    color: #847E89;
 }
 
 .guidePage img {
@@ -131,15 +150,6 @@
 .guidePage .sources li {
     margin: 0;
     display: list-item;
-}
-.guidePage .sources a {
-    color: #087E8B;
-}
-.guidePage .sources a:hover {
-    color: #06646e;
-}
-.guidePage .sources a:visited {
-    color: #847E89;
 }
 
 /* Back Button */
