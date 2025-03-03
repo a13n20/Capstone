@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view, parser_classes
 from rest_framework.parsers import MultiPartParser, FormParser
 import os
 
-from .phish_detect_V1.model import detect_phishing
+from .models import detect_phishing
 
 @api_view(["POST"])
 @parser_classes([MultiPartParser, FormParser])
