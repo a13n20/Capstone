@@ -17,14 +17,14 @@ const FileUpload = ({ setPrediction }) => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8000/api/upload-email/", {
+      const response = await fetch("http://localhost:8000/api/phishing/upload/", {
         method: "POST",
         body: formData,
       });
       const data = await response.json();
       
-      if (data.prediction) {
-        setPrediction(data.prediction);
+      if (data.result && data.result.is_phishing !== undefined) {
+        setPrediction(data.result.is_phishing ? "Phishing detected" : "No phishing detected");
       } else {
         alert("Error: No prediction received");
       }
