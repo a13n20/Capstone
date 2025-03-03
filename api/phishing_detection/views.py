@@ -1,22 +1,21 @@
 from django.http import JsonResponse
-from rest_framework.decorators import api_view, parser_classes
-from rest_framework.parsers import MultiPartParser, FormParser
-import os
+import json
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 from .models import detect_phishing
 
-@api_view(["POST"])
-@parser_classes([MultiPartParser, FormParser])
-def upload_email_file(request):
-    if "file" not in request.FILES:
-        return JsonResponse({"error": "No file uploaded"}, status=400)
-
-    uploaded_file = request.FILES["file"]
-    print(f"Received file: {uploaded_file.name}, size: {uploaded_file.size}")
-    
-    file_content = uploaded_file.read().decode("utf-8")
-    print(f"File content (first 100 characters): {file_content[:100]}")
-
-    result = detect_phishing(file_content)
-    print(f"Model result: {result}")
-    return JsonResponse({"prediction": result})
+@csrf_exempt
+@require_POST
+def detect_phishing_view(request):
+    try:
+        data = json.loads(request.body)
+        text = data.get("text", "")
+        if text:
+            result = detect_phishing(text)
+            return JsonResponse({"result": result})
+        else:
+            return JsonResponse({"error": "No text provided"}, status=400)
+    except Exception as e:
+        return JsonResponse({"error": f"Failed to analyze text: {str(e)}"}, status=500)
+    return JsonResponse({"message": "Phishing analysis complete"})
