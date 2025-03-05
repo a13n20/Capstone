@@ -4,3 +4,4 @@ djangorestframework
 transformers
 torch
 numpy<2
+bs4
