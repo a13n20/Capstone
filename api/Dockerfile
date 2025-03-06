@@ -9,8 +9,6 @@ WORKDIR /api
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-RUN git lfs pull
-
 # copy from the current directory of the Dockerfile to /api in the image
 COPY . . 
 
