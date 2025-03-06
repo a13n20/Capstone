@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import detect_phishing, upload_email_file
+from . import views
 
 urlpatterns = [
-    path("detect/", detect_phishing, name="detect_phishing"),
-    path("upload/", upload_email_file, name="upload_email_file"),
+    path('detect/', views.detect_phishing_view, name='detect_phishing'),
+    path('upload/', views.upload_email_view, name='upload_email'),
 ]
