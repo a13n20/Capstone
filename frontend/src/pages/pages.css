@@ -70,6 +70,28 @@
     margin-bottom: 10px;
 }
 
+.columns {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.box {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Phishing Detection Page */
+.phishingResult p {
+    text-align: center;
+}
+.phishingResult.phishing p {
+    color: red !important;
+}
+.phishingResult.no-phishing p {
+    color: green !important;
+}
+
 /* Guide List */
 .guidePage li {
     text-align: left;

@@ -83,6 +83,7 @@ const CreditBureauFreeze = () => {
                 <li>NordVPN - <a href="https://nordvpn.com/link-checker/" target="_blank" rel="noopener noreferrer">NordVPN link checker</a></li>
                 <li>TransUnion - <a href="https://www.transunion.com/?atvy=%7B%22264995%22%3A%22Experience+B%22%7D" target="_blank" rel="noopener noreferrer">TransUnion</a></li>
             </ul>
+            <BackButton />
         </div>
     )
 }

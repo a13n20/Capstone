@@ -14,6 +14,7 @@ const TwoFactorAuthentication = () => {
             <h1>{title}</h1>
             <h2>Why have it?</h2>
             <h2>Trustworthy Tools</h2>
+            <BackButton />
         </div>
     )
 }
