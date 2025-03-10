@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import PhishingDetectionPage from './pages/phishingDetectionPage';
 import GuidesPage from './pages/guidePage.js';
 import GuideDetails from "./pages/guideDetails";
+import PasswordAidPage from "./pages/passwordAidPage.js";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/" element={<h2>Welcome to the Home Page</h2>} /> {/* Homepage */}
           <Route path="/guides" element={<GuidesPage />} />
           <Route path="/phishing-detection" element={<PhishingDetectionPage />} />
-          <Route path="/password-aid" element={<h2>Password Aid (Coming Soon)</h2>} />
+          <Route path="/password-aid" element={<PasswordAidPage />} />
           <Route path="/guide/:title" element={<GuideDetails />} />
         </Routes>
       </main>
