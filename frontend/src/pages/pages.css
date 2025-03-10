@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+.guidePage {
+    background-color: white;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    font-family: Calibri, sans-serif;
+    padding: 10px;
+}
+
+.guidePage h1 {
+    color: #461220;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    line-height: 1.3;
+    font-size: calc(40px + 2vmin);
+    font-family: 'Iceland', cursive;
+}
+
+.guidePage h2 {
+    text-align: left;
+    color: #461220;
+    margin-top: 15px;
+    line-height: 1.4;
+    font-size: calc(15px + 2vmin);
+}
+
+.guidePage h3 {
+    text-align: left;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: calc(10px + 2vmin);
+}
+
+.guidePage p {
+    text-indent: 2em;
+    text-align: left;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: calc(5px + 2vmin);
+}
+
+.guidePage a {
+    color: #087E8B;
+}
+.guidePage a:hover {
+    color: #06646e;
+}
+.guidePage a:visited {
+    color: #847E89;
+}
+
+.guidePage img {
+    max-width: 1000px;
+    max-height: 500px;
+    display: block;
+    border-color: #0B3954;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Guide List */
+.guidePage li {
+    text-align: left;
+    margin-bottom: 5px;
+}
+.guidePage ul {
+    text-align: left;
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+.guidePage .guideLink {
+    text-decoration: none;
+    display: block;
+}
+.guidePage .guideLink h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #087E8B;
+}
+.guidePage .guideLink:hover h3 {
+    color: #06646e;
+}
+.guidePage .guideLink p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #404040;
+}
+.guidePage .guideLink:hover p {
+    color: black;
+}
+.guidePage .a p {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 5px;
+    color: black;
+    font-size: calc(5px + 2vmin);
+}
+
+/* Guide Steps */
+.guidePage .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding-left: 35px;
+    color: black;
+    font-size: calc(5px + 2vmin);
+    list-style-type: decimal;
+    list-style-position: outside;
+}
+
+/* Guide Points */
+.guidePage .points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    padding-left: calc(2em + 20px);
+    color: black;
+    font-size: calc(5px + 2vmin);
+    list-style-type: circle;
+    list-style-position: outside;
+}
+
+/* Sources */
+.guidePage .sources {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    padding-left: 20px;
+    color: black;
+    font-size: calc(5px + 2vmin);
+    list-style-type: circle;
+    list-style-position: outside;
+}
+.guidePage .sources li {
+    margin: 0;
+    display: list-item;
+}
+
+/* Back Button */
+.guidePage button {
+    background-color: #847E89;
+    color: white;
+    border-radius: 5px;
+    outline: 2px;
+    border: 0;
+    text-transform: uppercase;
+}
+.guidePage button:hover {
+    background-color: #68646b
+}

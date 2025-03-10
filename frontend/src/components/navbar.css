@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
 .NavbarContainer {
     background-color: #0B3954;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   
   .App-header {
     background-color: #0B3954;
-    min-height: 25vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    align-items: left;
+    justify-content: left;
+    font-size: calc(25px + 2vmin);
     color: white;
+    font-family: 'Iceland', cursive;
   }
   
   .NavLinks {
@@ -30,6 +33,7 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-family: Calibri, sans-serif;
   }
   
   .NavLinks a:hover {
