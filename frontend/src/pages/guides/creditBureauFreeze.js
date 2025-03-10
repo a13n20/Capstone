@@ -12,7 +12,7 @@ const CreditBureauFreeze = () => {
         <div className='guidePage'>
             <BackButton />
             <h1>{title}</h1>
-            <p>There's a simple and easy way to stay safe online that most people overlook: <b>freezing your credit bureau accounts.</b> Freezing an account means no new lines of credit can be opened through that credit bureau. While your existing credit cards and loans will continue to work as normal, no one can apply for a mortgage, credit card, or loan in your name until the account is unfrozen. The best practice is to keep the account frozen and only unfreeze it for a specified period of time. This guide will explain why this is important, and also walk you through how to freeze and temporarily unfreeze each of your three credit bureau reports.</p>
+            <p>There's a simple, easy and <b>free</b> way to stay safe online that most people overlook: <b>freezing your credit bureau accounts.</b> Freezing an account means no new lines of credit can be opened through that credit bureau. While your existing credit cards and loans will continue to work as normal, no one can apply for a mortgage, credit card, or loan in your name until the account is unfrozen. The best practice is to keep the account frozen and only unfreeze it for a specified period of time. This guide will explain why this is important, and also walk you through how to freeze and temporarily unfreeze each of your three credit bureau reports.</p>
             <h2>Why freeze them?</h2>
             <p>Identity theft is a frightening experience, yet many people assume <i>"It won't happen to me."</i> This attitude could contrubute to the 290,000 reported cased of identity theft in just the third quarter of 2024—117,000 of which were cases of credit card fraud (Caporal, 2025). No one wants become a victim, but one form of identity theft you <i>can</i> actively protect yourself against is credit card fraud, the most common type of identity theft since 2022 (Federal Trade Commission, 2024). Regardless of whether you see this as a major concern, protecting yourself is simple and requires minimal effort—making it worth taking the extra precaustions.</p>
             <h2>Getting Set-Up</h2>
@@ -53,17 +53,26 @@ const CreditBureauFreeze = () => {
             <ul className='steps'>
                 <li><b>Log in to Experian.</b></li>
                 <li><b>Scroll down and click "Unfreeze file."</b> The section will look like this:<img src='/images/creditFreeze/ExperianUnfreezeNavigation.png' alt='A blue stip with a frozen screen in the center with a red "Unfreeze file" button on the bottom left.' /></li>
-                <li><b>Click "Schedule a thaw" or the "Unfrozen | Frozen" button.</b> <img src='/images/creditFreeze/ExperianUnfreezeButton.png' alt='A gray snowflake on the right, with a green "Unfrozen | Frozen" button on the left. "Schedule a thaw" is in the center in small pink letters.' /> Clicking the "Unfrozen | Frozen" button will unfreeze your account, but you will have to manually refreeze it. I suggest scheduling a thaw rather than simply unfreezing your file. This ensures that the account will refreeze on a specified date if you forget to do it yourself. If you choose to schedule a thaw, then proceed to the next step. If not, then you don't need to proceed any further.</li>
+                <li><b>Click "Schedule a thaw" or the "Unfrozen | Frozen" button.</b> <img src='/images/creditFreeze/ExperianUnfreezeButton.png' alt='A gray snowflake on the right, with a green "Unfrozen | Frozen" button on the left. "Schedule a thaw" is in the center in small pink letters.' /> Clicking the "Unfrozen | Frozen" button will unfreeze your account, but you will have to manually refreeze it. I suggest scheduling a thaw rather than simply unfreezing your file. This ensures that the account will refreeze on a specified date if you forget to do it yourself. If you choose to schedule a thaw, click "Schedule a thaw" and proceed to the next step. If not, click "Unfrozen | Frozen"; you don't need to proceed any further.</li>
                 <li><b>Select a date range.</b> First click on the pink "Add a thaw" button on the bottom left of the pop out window. On the next page, select a date range and click "Schedule thaw."<img src='/images/creditFreeze/ExperianSelectDate.png' alt='A pop out window that says "Schedule a thaw" at the top, with a pale pink "Schedule a thaw" button on the bottom right. In the center, a dropdown menu that says "Select sate range."' /></li>
             </ul>
             <h2>TransUnion</h2>
             <h3>Freeze</h3>
             <ul className='steps'>
-                
+                <li><b>Navigate to <a href="https://www.transunion.com/?atvy=%7B%22264995%22%3A%22Experience+B%22%7D" target="_blank" rel="noopener noreferrer">TransUnion</a>.</b> It should look like this: <img src='/images/creditFreeze/TransHomePage.png' alt='TransUnion home page. Yellow "Get started now" button on the left. Woman in a yellow shirt on the right with a phone next to her face. "Member Login" and "Get Credit Monitoring" on the upper right corner.' />Ignore "Get started now" and "Get Credit Monitoring" as these will take you to their paid service sign up. <i>If you already have an account click "Member Login" and skip to step 5.</i>
+                </li>
+                <li><b>Hover over "Services" and select "Freeze Credit Report."</b> You should be navigated to this page: <img src='/images/creditFreeze/TransCreditFreeze.png' alt='"Credit Freeze" in big letters with two yellow buttons that say "Add a Freeze" and "Unfreeze."' /></li>
+                <li><b>Click "Add A Freeze."</b> This will take you to the account creation page.</li><img src='/images/creditFreeze/TransCreateAccount.png' alt='TransUnion account creation page. A form for personal information is in the center.' />
+                <li><b>Follow TransUnion's steps.</b> Remember to <i>use a unique password,</i> and if you created a new email <i>sign up with that email.</i> Once your account is created, log in.<img src='/images/creditFreeze/TransFreeze.png' alt='TransUnion account page.' /></li>
+                <li><b>Click "Add Freeze."</b> This is right on the main page of your account. This will take you to this page: <img src='/images/creditFreeze/TransAddFreeze.png' alt='"Available" under a gray snowflake. A big blue button that says "Add Freeze."' /></li>
+                <li><b>Click "Add Freeze."</b> You will have to click "Continue" a couple of times. Once your report is frozen, you will return to the original screen, but it will say "Frozen."</li>
             </ul>
             <h3>Unfreeze</h3>
             <ul className='steps'>
-                
+                <li><b>Log in to TransUnion.</b></li>
+                <li><b>Click "Credit Freeze."</b></li>
+                <li><b>Click one of the blue buttons.</b> <img src='/images/creditFreeze/TransLiftFreeze.png' alt='"Fozen" under a blue snowflake. Two big blue buttons that say "Remove Freeze" and "Temporarily Lift Freeze."' />I recommend temporarily lifting the freeze. This ensures that the account will refreeze on a specified date if you forget to do it yourself. If you choose to temporarily lift the freeze, click "Temporarily Lift Freeze" and proceed to the next step. If you choose to remove the freeze, click "Remove Freeze," then "Continue" until you return to the original page; you do not need to proceed any further.</li>
+                <li><b>Select dates for lift.</b> Scroll down a little until you see two boxes that say "Start Date" and "End Date." Input the dates you wish to lift the freeze and click continue.</li>
             </ul>
             <h2>Sources</h2>
             <ul className='sources'>
@@ -74,6 +83,7 @@ const CreditBureauFreeze = () => {
                 <li>NordVPN - <a href="https://nordvpn.com/link-checker/" target="_blank" rel="noopener noreferrer">NordVPN link checker</a></li>
                 <li>TransUnion - <a href="https://www.transunion.com/?atvy=%7B%22264995%22%3A%22Experience+B%22%7D" target="_blank" rel="noopener noreferrer">TransUnion</a></li>
             </ul>
+            <BackButton />
         </div>
     )
 }
