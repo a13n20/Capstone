@@ -4,10 +4,14 @@ import { detectPhishing } from "../phishing_detection_call/phishingDetection";
 const PhishingCheck = () => {
   const [text, setText] = useState("");
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleCheck = async () => {
+    setLoading(true);
+    setResult(null);
     const response = await detectPhishing(text);
     setResult(response);
+    setLoading(false);
   };
 
   return (
@@ -21,6 +25,8 @@ const PhishingCheck = () => {
       />
       <button onClick={handleCheck}>Check</button>
 
+      {loading && <p className="loadingResult">Analyzing text...</p>}
+      
       {result && (
         <div className={`phishingResult ${result.is_phishing ? 'phishing' : 'no-phishing'}`}>
           <p>{result.is_phishing ? "Phishing Detected" : "No Phishing Detected"}</p>

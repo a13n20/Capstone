@@ -91,6 +91,11 @@
 .phishingResult.no-phishing p {
     color: green !important;
 }
+.guidePage .loadingResult {
+    text-align: center;
+    font-style: italic;
+    color: #461220;
+}
 
 /* Guide List */
 .guidePage li {

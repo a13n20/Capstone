@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const FileUpload = () => {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -13,6 +14,9 @@ const FileUpload = () => {
       alert("Please select a file to upload.");
       return;
     }
+
+    setLoading(true);
+    setResult(null);
 
     const formData = new FormData();
     formData.append("file", file);
@@ -32,6 +36,8 @@ const FileUpload = () => {
     } catch (error) {
       console.error("Error during file upload:", error);
       alert("File upload failed.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -45,6 +51,8 @@ const FileUpload = () => {
         onChange={handleFileChange}
       />
       <button onClick={handleUpload}>CHECK</button>
+
+      {loading && <p className="loadingResult">Analyzing file...</p>}
 
       {result && (
         <div className={`phishingResult ${result === "Phishing Detected" ? "phishing" : "no-phishing"}`}>

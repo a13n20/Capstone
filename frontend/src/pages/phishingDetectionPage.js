@@ -21,7 +21,7 @@ const PhishingDetectionPage = () => {
 
       <div className='columns'>
         <div className='box'>
-          <h3>How to Download an email</h3>
+          <h3>How to Download an Email</h3>
           <p>Downloading emails may be different depending on the website you use, but the general idea should be the same.</p>
           <ul className='steps'>
             <li>Find the three dots at the upper right corner of the email, hover over it, and move the mouse down to "Download." If there are options, choose to download the email as a EML file.</li>
