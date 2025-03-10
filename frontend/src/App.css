@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
 .App {
   text-align: center;
 }
@@ -13,20 +15,22 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #0B3954;
   min-height: 25vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(50px + 2vmin);
   color: white;
+  font-family: 'Iceland', cursive;
 }
 
 .Navbar {
-  background-color: #847E89;
+  background-color: #087E8B;
   overflow: hidden;
+  font-family: Calibri, sans-serif;
 }
 
 .NavLinks {
@@ -47,16 +51,16 @@
 }
 
 .NavLinks li a:hover {
-  background-color: #ddd;
-  color: black;
-}
+  background-color: #087E8B;
+  color: white;
+} */
 
 main{
   padding: 20px;
 }
 
 .App-link {
-  color: #087E8B;
+  color: #461220;
 }
 
 @keyframes App-logo-spin {
