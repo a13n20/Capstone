@@ -15,7 +15,7 @@ const PhishingCheck = () => {
   };
 
   return (
-    <div>
+    <div className="intro">
       <h2>Paste Text</h2>
       <p>Copy the text of the suspicious email into the textbox and click "CHECK."</p>
       <textarea

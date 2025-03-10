@@ -42,7 +42,7 @@ const FileUpload = () => {
   };
 
   return (
-    <div>
+    <div className="intro">
       <h2>Upload Email File</h2>
       <p>Upload the email file below and click "CHECK." If you need help figuring out how to download an email, refer to the content below.</p>
       <input
