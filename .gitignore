@@ -1,2 +1,3 @@
 venv/
 api/phishing_detection/phish_detect_V1/model.safetensors
+api/password_aid/rockyou.txt
