@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path("api/phishing/", include("phishing_detection.urls")),
+    path("api/passwordaid/", include("password_aid.urls")),
 ]

@@ -48,6 +48,11 @@
     font-size: calc(5px + 2vmin);
 }
 
+.guidePage .intro p {
+    text-align: center;
+    text-indent: 0;
+}
+
 .guidePage a {
     color: #087E8B;
 }

@@ -7,9 +7,12 @@ import "./pages.css";
 const PhishingDetectionPage = () => {
   return (
     <div className='guidePage'>
-      <h1>Phishing Detection</h1>
-      <p>Check if an email is phishing by either pasting text or uploading a file.</p>
-
+      <div className='intro'>
+        <h1>Phishing Detection</h1>
+        <p>Check if an email is phishing by either pasting text or uploading a file.</p>
+        <p><b>Important:</b> This AI is not 100% accurate. If you’re unsure, the safest option is to <b>call the company directly</b> using a phone number from their official website.</p>
+        <p><b>Do NOT click on any links in suspicious emails.</b></p>
+      </div>
       <div className='columns'>
         <div className='box'>
           <PhishingCheck />
