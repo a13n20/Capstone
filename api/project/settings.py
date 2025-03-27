@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)_*+$7n(bx6x(ildr*-7y$4c(xhecoizunhj2()l1yviyyx9(r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['capstone-production-ae32.up.railway.app', '0.0.0.0', '127.0.0.1', 'localhost']
 
 
 # Application definition
