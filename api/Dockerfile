@@ -4,11 +4,8 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /api
 
-# COPY requirements.txt .
-
-
 # copy from the current directory of the Dockerfile to /api in the image
-COPY . . 
+COPY . .
 
 RUN pip install -r requirements.txt
 RUN chmod +x /api/download_files.sh
