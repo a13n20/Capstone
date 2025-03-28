@@ -8,6 +8,6 @@ WORKDIR /api
 COPY . .
 
 RUN pip install -r requirements.txt
-RUN chmod +x /api/download_files.sh
+RUN chmod +x /api/download_files.sh && /api/download_files.sh
 
 EXPOSE 8000
