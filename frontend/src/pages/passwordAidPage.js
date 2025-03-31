@@ -38,7 +38,10 @@ const PasswordAidPage = () => {
 
     return (
         <div className='guidePage'>
-            <h1>Password Aid</h1>
+            <div className='intro'>
+                <h1>Password Aid</h1>
+                <p>"Creating a strong password is one of the most important steps in keeping your accounts safe. In the box below, you can type a password to check if it's commonly used by real people—hackers often try these first! Don't worry, your password won't be stored. If it appears on the list, it's best to choose something stronger."</p>
+            </div>
             <form onSubmit={handleSearch}>
                 <input
                     type="text"
