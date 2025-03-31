@@ -5,13 +5,17 @@ function SearchBar({ onSearch }) {
 
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
-        onSearch(event.target.value);
+        
+        clearTimeout(window.searchTimeout);
+        window.searchTimeout = setTimeout(() => {
+            onSearch(event.target.value);
+        }, 300);
     };
 
     return (
         <input
             type="text"
-            placeholder="Search..."
+            placeholder="Search guides..."
             value={searchTerm}
             onChange={handleChange}
         />
