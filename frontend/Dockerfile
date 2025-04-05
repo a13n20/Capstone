@@ -7,8 +7,10 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-ENV PORT 3000
+RUN npm install -g serve
 
-EXPOSE $PORT
+ENV PORT 8080
 
-CMD ["npm", "start"]
+EXPOSE 8080
+
+CMD ["serve", "-s", "build", "-l", "8080"]

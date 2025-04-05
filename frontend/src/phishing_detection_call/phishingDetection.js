@@ -1,6 +1,6 @@
 export const detectPhishing = async (text) => {
     try {
-      const response = await fetch("http://localhost:8000/api/phishing/detect/", {
+      const response = await fetch("process.env.https://capstone-production-ae32.up.railway.app/api/phishing/detect/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

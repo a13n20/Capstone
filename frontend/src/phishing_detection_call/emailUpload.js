@@ -3,7 +3,7 @@ export const uploadEmailFile = async (file) => {
     formData.append("file", file);
   
     try {
-      const response = await fetch("http://localhost:8000/api/phishing/upload/", {
+      const response = await fetch("https://capstone-production-ae32.up.railway.app/api/phishing/upload/", {
         method: "POST",
         body: formData,
       });
