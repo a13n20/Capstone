@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 const FileUpload = () => {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
@@ -22,7 +24,7 @@ const FileUpload = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8000/api/phishing/upload/", {
+      const response = await fetch(`${BACKEND_URL}/api/phishing/upload/`, {
         method: "POST",
         body: formData,
       });

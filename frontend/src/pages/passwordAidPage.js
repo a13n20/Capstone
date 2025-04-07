@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import "./pages.css";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 const PasswordAidPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState([]);
@@ -20,7 +22,7 @@ const PasswordAidPage = () => {
 
         try {
             // Make a GET request to your Django search view
-            const response = await fetch(`http://localhost:8000/api/passwordaid/search/?q=${searchTerm}`);
+            const response = await fetch(`${BACKEND_URL}/api/passwordaid/search/?q=${searchTerm}`);
             const data = await response.json();
 
             if (response.ok) {

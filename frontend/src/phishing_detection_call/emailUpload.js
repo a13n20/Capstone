@@ -1,9 +1,11 @@
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 export const uploadEmailFile = async (file) => {
     const formData = new FormData();
     formData.append("file", file);
   
     try {
-      const response = await fetch("https://capstone-production-ae32.up.railway.app/api/phishing/upload/", {
+      const response = await fetch(`${BACKEND_URL}/api/phishing/upload/`, {
         method: "POST",
         body: formData,
       });

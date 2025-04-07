@@ -17,7 +17,7 @@ def detect_phishing_view(request):
         text = data.get("text", "")
         if text:
             result = detect_phishing(text)
-            return JsonResponse({"result": result})
+            return JsonResponse({"is_phishing": result})
         else:
             return JsonResponse({"error": "No text provided"}, status=400)
     except Exception as e:
