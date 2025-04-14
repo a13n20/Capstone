@@ -12,7 +12,7 @@
 }
 
 .guidePage h1 {
-    color: #461220;
+    color: rgb(112, 11, 11);
     align-items: center;
     justify-content: center;
     margin-top: 20px;
@@ -23,7 +23,7 @@
 
 .guidePage h2 {
     text-align: left;
-    color: #461220;
+    color: rgb(112, 11, 11);
     margin-top: 15px;
     line-height: 1.4;
     font-size: calc(15px + 2vmin);

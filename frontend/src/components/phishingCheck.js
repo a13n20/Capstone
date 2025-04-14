@@ -28,9 +28,10 @@ const PhishingCheck = () => {
 
       {loading && <p className="loadingResult">Analyzing text...</p>}
       
+      {/* I dont know why deploying it changed the response structure, but here we are */}
       {result && (
-        <div className={`phishingResult ${result.is_phishing ? 'phishing' : 'no-phishing'}`}>
-          <p>{result.is_phishing ? "Phishing Detected" : "No Phishing Detected"}</p>
+        <div className={`phishingResult ${result.is_phishing.is_phishing ? 'phishing' : 'no-phishing'}`}>
+          <p>{result.is_phishing.is_phishing ? "Phishing Detected" : "No Phishing Detected"}</p>
         </div>
       )}
     </div>

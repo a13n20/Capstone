@@ -6,7 +6,7 @@ Peussian blue: #0B3954
 White
     - Main header text
     - Navbar text
-Chocolate cosmos: #461220
+Chocolate cosmos:rgb(112, 11, 11)
     - Header text (not main header)
 Teal: #087E8B
     - Unclicked Links
