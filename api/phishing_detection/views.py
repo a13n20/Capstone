@@ -37,12 +37,16 @@ def extract_text_from_html(html_content):
 @require_POST
 def upload_email_view(request):
     if "file" not in request.FILES:
+        print("FILES RECEIVED:", request.FILES)
         return JsonResponse({"error": "No file provided"}, status=400)
 
     uploaded_file = request.FILES["file"]
     
     try:
         msg = email.message_from_bytes(uploaded_file.read())
+        print("File size:", uploaded_file.size)
+        print("File name:", uploaded_file.name)
+
 
         email_text = ""
         if msg.is_multipart():

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+import { uploadFile } from "../phishing_detection_call/fileUpload";
 
 const FileUpload = () => {
   const [file, setFile] = useState(null);
@@ -20,15 +19,8 @@ const FileUpload = () => {
     setLoading(true);
     setResult(null);
 
-    const formData = new FormData();
-    formData.append("file", file);
-
     try {
-      const response = await fetch(`${BACKEND_URL}/api/phishing/upload/`, {
-        method: "POST",
-        body: formData,
-      });
-      const data = await response.json();
+      const data = await uploadFile(file);
       
       if (data.result && data.result.is_phishing !== undefined) {
         setResult(data.result.is_phishing ? "Phishing Detected" : "No Phishing Detected");

@@ -1,11 +1,9 @@
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
-export const uploadEmailFile = async (file) => {
+export const uploadFile = async (file) => {
     const formData = new FormData();
     formData.append("file", file);
   
     try {
-      const response = await fetch(`${BACKEND_URL}/api/phishing/upload/`, {
+      const response = await fetch(`https://django-backend-848546903722.us-central1.run.app/api/phishing/upload/`, {
         method: "POST",
         body: formData,
       });

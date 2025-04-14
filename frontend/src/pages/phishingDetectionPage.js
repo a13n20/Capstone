@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PhishingCheck from "../components/phishingCheck";
-import FileUpload from "../components/fileUpload";
+import EmailUpload from "../components/emailUpload";
 
 import "./pages.css";
 
@@ -18,7 +18,7 @@ const PhishingDetectionPage = () => {
           <PhishingCheck />
         </div>
         <div className='box'>
-          <FileUpload />
+          <EmailUpload />
         </div>
       </div>
 

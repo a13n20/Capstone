@@ -10,6 +10,7 @@ const PhishingCheck = () => {
     setLoading(true);
     setResult(null);
     const response = await detectPhishing(text);
+    console.log("Phishing API response:", response);
     setResult(response);
     setLoading(false);
   };
