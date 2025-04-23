@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import index, google_login
+from .views import index, google_login, cyber_news
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path("api/phishing/", include("phishing_detection.urls")),
     path("api/passwordaid/", include("password_aid.urls")),
     path("auth/google/", google_login, name="google_login"),
+    path('api/cybernews/', cyber_news, name='cyber_news'),
 ]

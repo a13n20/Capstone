@@ -6,6 +6,7 @@ import PhishingDetectionPage from './pages/phishingDetectionPage';
 import GuidesPage from './pages/guidePage.js';
 import GuideDetails from "./pages/guideDetails";
 import PasswordAidPage from "./pages/passwordAidPage.js";
+import CyberNews from "./pages/cyberNews.js";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <main>
         {/* Routes for different pages */}
         <Routes>
-          <Route path="/" element={<h2>Welcome to the Home Page</h2>} /> {/* Homepage */}
+          <Route path="/" element={<CyberNews />} /> {/* Homepage */}
           <Route path="/guides" element={<GuidesPage />} />
           <Route path="/phishing-detection" element={<PhishingDetectionPage />} />
           <Route path="/password-aid" element={<PasswordAidPage />} />

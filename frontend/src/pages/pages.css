@@ -196,3 +196,26 @@
 .guidePage button:hover {
     background-color: #68646b
 }
+
+/* News Articles */
+.newsArticles {
+    display: flex;
+    align-items: center;
+}
+.newsArticles img {
+    max-width: 450px;
+    max-height: 200px;
+    display: block;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.newsArticles .articleInfo {
+    display: block;
+    padding-left: 10px
+}
+.newsInfo p {
+    text-indent: 0em;
+}

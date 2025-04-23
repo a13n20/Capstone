@@ -1,3 +1,13 @@
+## Docker
+
+---
+
+### Run out of space
+
+```
+docker system prune -a --volumes
+```
+
 ## Frontend
 
 ---

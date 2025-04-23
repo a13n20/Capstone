@@ -6,6 +6,7 @@ from google.oauth2 import id_token
 from google.auth.transport import requests as google_requests
 from django.conf import settings
 from django.contrib.auth.models import User
+from newsapi import NewsApiClient
 
 GOOGLE_CLIENT_ID = "848546903722-vrqli9718kbhjjlm13iu2888q16nd2h2.apps.googleusercontent.com"
 
@@ -40,3 +41,16 @@ def google_login(request):
 
     except ValueError:
         return JsonResponse({"error": "Invalid token"}, status=400)
+
+def cyber_news(request):
+    api_key = 'fea68d2f6e5245b0ae80dda126a365f7'
+    newsapi = NewsApiClient(api_key=api_key)
+
+    try:
+        top_headlines = newsapi.get_everything(
+            q='cybersecurity',
+            language='en',
+        )
+        return JsonResponse(top_headlines, safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
