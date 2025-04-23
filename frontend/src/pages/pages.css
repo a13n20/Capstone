@@ -201,6 +201,8 @@
 .newsArticles {
     display: flex;
     align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .newsArticles img {
     max-width: 450px;
@@ -216,6 +218,20 @@
     display: block;
     padding-left: 10px
 }
-.newsInfo p {
-    text-indent: 0em;
+.newsArticles h4 {
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: calc(5px + 2vmin);
+}
+.newsArticles p {
+    text-indent: 0;
+    text-align: left;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: calc(5px + 2vmin);
 }

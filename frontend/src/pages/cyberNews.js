@@ -26,7 +26,7 @@ const CyberNews = () => {
                             <img
                                 src={article.urlToImage}
                                 alt={article.title}
-                                className="w-full h-48 object-cover rounded-lg mb-2"
+                                onError={(e) => e.target.style.display = 'none'}
                             />
                         )}
                         <div className='articleInfo'>
@@ -38,10 +38,10 @@ const CyberNews = () => {
                             >
                                 {article.title}
                             </a>
-                            <p>
+                            <h4>
                                 <span>{article.source.name}</span> •{' '}
                                 {new Date(article.publishedAt).toLocaleString()}
-                            </p>
+                            </h4>
                             <p>{article.description}</p>
                         </div>
                     </div>
