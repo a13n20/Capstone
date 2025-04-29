@@ -1,13 +1,3 @@
-# Capstone
-Capstone Spring 2025
+# Live URL
 
-The project is being held in a dockerfile. Run:
-
-```
-docker-compose build
-docker-compose up
-```
-
-Navigate to:
-
-[LocalHost:3000](http://localhost:3000)
+https://react-frontend-848546903722.us-central1.run.app
