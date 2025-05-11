@@ -17,6 +17,9 @@ function Navbar() {
           <li><Link to="/guides">Guides</Link></li>
           <li><Link to="/phishing-detection">Phishing Detection</Link></li>
           <li><Link to="/password-aid">Password Aid</Link></li>
+          <li>
+            <a href="https://django-backend-848546903722.us-central1.run.app/accounts/google/login/">Sign In</a>
+          </li>
         </ul>
       </nav>
     </div>
