@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import index, cyber_news, post_login_redirect, post_logout_redirect
+from .views import index, cyber_news, post_login_redirect, post_logout_redirect, check_login, google_login, google_logout
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +26,9 @@ urlpatterns = [
     path('api/cybernews/', cyber_news, name='cyber_news'),
      path('post-login/', post_login_redirect, name='post_login'),
     path('post-logout/', post_logout_redirect, name='post_logout'),
+    path('api/check-login/', check_login, name='check_login'),
+     path('api/google-login/', google_login),
+     path('api/google-logout/', google_logout, name='google_logout'),
     path('accounts/', include('allauth.urls')),
 ]
+
