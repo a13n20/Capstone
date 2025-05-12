@@ -2,7 +2,9 @@
 
 .NavbarContainer {
     background-color: #0B3954;
-    padding: 10px 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   .App-header {
@@ -40,3 +42,13 @@
     color: #ddd;
   }
   
+  .google {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  span {
+    color: white;
+    font-family: Calibri, sans-serif;
+  }
