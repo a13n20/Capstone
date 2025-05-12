@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from corsheaders.defaults import default_headers
 import os
 
 
@@ -30,7 +31,7 @@ SECRET_KEY = 'django-insecure-)_*+$7n(bx6x(ildr*-7y$4c(xhecoizunhj2()l1yviyyx9(r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-backend-848546903722.us-central1.run.app', '0.0.0.0', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['django-backend-848546903722.us-central1.run.app', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -67,11 +68,16 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/post-logout/'
 SOCIALACCOUNT_LOGIN_ON_GET = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
+CORS_ALLOW_CREDENTIALS = True
+SESSION_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'project.middleware.CommonMiddlewareAppendSlashWithoutRedirect',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -185,4 +191,8 @@ CSRF_TRUSTED_ORIGINS = [
 CORS_ALLOWED_ORIGINS = [
     'https://django-backend-848546903722.us-central1.run.app',
     'https://react-frontend-848546903722.us-central1.run.app',
+]
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "X-CSRFToken",
 ]
