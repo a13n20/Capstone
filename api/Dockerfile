@@ -1,10 +1,9 @@
-FROM  python:3.13.3-bullseye
+FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /api
 
-# copy from the current directory of the Dockerfile to /api in the image
 COPY . .
 
 RUN pip install -r requirements.txt
@@ -14,5 +13,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:8080 project.wsgi"]
-
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "project.wsgi"]
