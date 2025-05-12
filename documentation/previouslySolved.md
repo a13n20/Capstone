@@ -74,9 +74,23 @@ IMAGE_TAG=$(date +%Y%m%d%H%M%S)
 docker buildx build --platform linux/amd64 -t django-backend:$IMAGE_TAG .
 docker tag django-backend:$IMAGE_TAG us-central1-docker.pkg.dev/data-protection-program/backend-repo/django-backend:$IMAGE_TAG
 docker push us-central1-docker.pkg.dev/data-protection-program/backend-repo/django-backend:$IMAGE_TAG
+```
+
+### Run from terminal
+
+
+```
 gcloud run deploy django-backend \
   --image us-central1-docker.pkg.dev/data-protection-program/backend-repo/django-backend:$IMAGE_TAG \
   --platform=managed \
   --region=us-central1 \
-  --allow-unauthenticated
+  --allow-unauthenticated \
+  --add-cloudsql-instances="data-protection-program:us-central1:capstone" \
+  --env-vars-file secrets/env-vars.yaml
+```
+
+### Run locally
+
+```
+docker run -p 8080:8080 --env-file secrets/.env django-backend:20250508093339
 ```
