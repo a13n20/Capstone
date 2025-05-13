@@ -235,3 +235,15 @@
     line-height: 1.5;
     font-size: calc(5px + 2vmin);
 }
+
+/* searchBar */
+input {
+    text-indent: 2em;
+    text-align: left;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: calc(5px + 2vmin);
+    border: 2px solid black;
+}
