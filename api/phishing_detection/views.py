@@ -9,8 +9,10 @@ from bs4 import BeautifulSoup
 
 from .models import detect_phishing
 
+# Accepts only post and ignores csrf, wont work without these
 @csrf_exempt
 @require_POST
+# Extracts text from json request, feeds it to model, and returns result
 def detect_phishing_view(request):
     try:
         data = json.loads(request.body)
@@ -24,6 +26,7 @@ def detect_phishing_view(request):
         return JsonResponse({"error": f"Failed to analyze text: {str(e)}"}, status=500)
     return JsonResponse({"message": "Phishing analysis complete"})
 
+# Extracts text from html for .eml uploads
 def extract_text_from_html(html_content):
     soup = BeautifulSoup(html_content, "html.parser")
 
@@ -35,6 +38,7 @@ def extract_text_from_html(html_content):
 
 @csrf_exempt
 @require_POST
+# For email uploads instead of textbox uploads
 def upload_email_view(request):
     if "file" not in request.FILES:
         print("FILES RECEIVED:", request.FILES)
@@ -47,7 +51,7 @@ def upload_email_view(request):
         print("File size:", uploaded_file.size)
         print("File name:", uploaded_file.name)
 
-
+        # Processes email content as multipart (text, html, and attachments) or not (text and some html)
         email_text = ""
         if msg.is_multipart():
             for part in msg.walk():
@@ -73,6 +77,7 @@ def upload_email_view(request):
                 else:
                     email_text = decoded_payload
 
+        # Put extracted text into model and ger result
         if not email_text.strip():
             return JsonResponse({"error": "Email contains no text"}, status=400)
 
